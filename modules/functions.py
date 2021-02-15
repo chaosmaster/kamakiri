@@ -115,7 +115,7 @@ def switch_user(dev):
     dev.kick_watchdog()
 
 def parse_gpt(dev):
-    data = dev.emmc_read(0x400 // 0x200) + dev.emmc_read(0x600 // 0x200) + dev.emmc_read(0x800 // 0x200) + dev.emmc_read(0xA00 // 0x200)
+    data = dev.emmc_read(0x400 // 0x200) + dev.emmc_read(0x600 // 0x200) + dev.emmc_read(0x800 // 0x200) + dev.emmc_read(0xA00 // 0x200) + dev.emmc_read(0xC00 // 0x200) + dev.emmc_read(0xE00 // 0x200) + dev.emmc_read(0x1000 // 0x200)
     num = len(data) // 0x80
     parts = dict()
     for x in range(num):
