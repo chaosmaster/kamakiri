@@ -3,12 +3,7 @@
 
 #include <inttypes.h>
 
-void (*jump_bl)(void);
 void (*send_usb_response)(int, int, int);
-void (**ptr_send)();
-void (**ptr_recv)();
-void (*orig_ptr_send)();
-void (*orig_ptr_recv)();
 
 int (*send_dword)();
 int (*recv_dword)();

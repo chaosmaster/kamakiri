@@ -3,10 +3,10 @@
 rm -rf dist
 
 mkdir -p dist/unlock/kamakiri/bin
-cp bin/{preloader.img,lk.bin,tz.img,twrp.img,microloader.bin} dist/unlock/kamakiri/bin/
+#cp bin/{preloader.img,lk.bin,tz.img,twrp.img,microloader.bin} dist/unlock/kamakiri/bin/
 
-mkdir -p dist/unlock/kamakiri/lk-payload/build
-cp lk-payload/build/payload.bin dist/unlock/kamakiri/lk-payload/build/
+#mkdir -p dist/unlock/kamakiri/lk-payload/build
+#cp lk-payload/build/payload.bin dist/unlock/kamakiri/lk-payload/build/
 
 mkdir -p dist/unlock/kamakiri/modules
 cp modules/{common.py,load_payload.py,logger.py,main.py,functions.py} dist/unlock/kamakiri/modules/
@@ -17,10 +17,11 @@ cp brom-payload/stage1/stage1.bin dist/unlock/kamakiri/brom-payload/stage1/
 mkdir -p dist/unlock/kamakiri/brom-payload/stage2
 cp brom-payload/stage2/stage2.bin dist/unlock/kamakiri/brom-payload/stage2/
 
-cp {bootrom-step.sh,fastboot-step.sh} dist/unlock/kamakiri/
+#cp {bootrom-step.sh,fastboot-step.sh} dist/unlock/kamakiri/
+cp bootrom-step.sh dist/unlock/kamakiri/
 
-mkdir -p dist/unlock/META-INF/com/google/android
-cp META-INF/com/google/android/{update-binary,updater-script} dist/unlock/META-INF/com/google/android/
+#mkdir -p dist/unlock/META-INF/com/google/android
+#cp META-INF/com/google/android/{update-binary,updater-script} dist/unlock/META-INF/com/google/android/
 
 #mkdir -p dist/stock/kamakiri/bin
 #cp bin/{boot.img,recovery.img} dist/stock/kamakiri/bin/
@@ -28,7 +29,7 @@ cp META-INF/com/google/android/{update-binary,updater-script} dist/unlock/META-I
 
 mkdir -p dist/gptfix/kamakiri/bin
 cp gpt-fix.sh dist/gptfix/kamakiri/
-cp bin/gpt-mantis.bin dist/gptfix/kamakiri/bin/
+cp bin/gpt-maverick.bin dist/gptfix/kamakiri/bin/
 
 mkdir -p dist/full
 cp -r dist/unlock/* dist/full/
